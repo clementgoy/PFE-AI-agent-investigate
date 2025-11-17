@@ -4,3 +4,4 @@ elasticsearch==8.*
 python-dotenv
 requests
 pydantic
+openai==1.*
