@@ -1,0 +1,1 @@
+﻿{ "prompt": "Trouve des entreprises qui ont reçu un investissement (>= 1M USD) depuis 2010. Utilise la jointure investment→company on=['companies','id'], size=50." }

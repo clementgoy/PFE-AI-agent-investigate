@@ -1,0 +1,3 @@
+{
+  "prompt": "Liste 5 investissements en EUR depuis 2011 et donne les entreprises liées. Méthode : lookup sur 'investment' avec term raised_currency_code:EUR et range funded_year>=2011, size=20; puis join vers 'company' avec on=['companies','id'], size=5. Affiche pour chaque résultat: company.label, funded_year, raised_amount, 'EUR'. Ajoute une courte synthèse (#hits estimés) et propose un affinement (plage d’années, montant minimal)."
+}

@@ -1,0 +1,3 @@
+{
+  "prompt": "Identifie les investisseurs qui ont financé l’entreprise Aeropostale. Étapes : 1) lookup sur 'company' pour trouver l’id exact (id ou permalink) de Aeropostale; 2) lookup sur 'investment' filtré sur companies contenant cet id; 3) join investment→investor avec on=['investors','id'], size=5. Donne en sortie: investor.label et, pour chaque deal, funded_year, raised_amount, raised_currency_code. Si plusieurs correspondances d’entreprise existent, prends la plus pertinente (label exact)."
+}
