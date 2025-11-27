@@ -1,22 +1,19 @@
-﻿# agent/app.py
-# Quelques commentaires "humains" pour s'y retrouver.
-# - Tu lances ce service avec: uvicorn agent.app:app --reload --port 8000
-# - Il expose: /graph/indices, /graph/mapping, /graph/query, /chat, /health
-# - /chat fonctionne en 2 modes: "llm" (OpenAI) ou "local" (plan minimal)
+﻿
+# on peut lancer ce service avec : uvicorn agent.app:app --reload --port 8000
+# /chat fonctionne en 2 modes: "llm" (OpenAI) ou "local" (plan minimal)
 
 import os, json, requests
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi import Query as Q
 from pydantic import BaseModel
 
-# Optionnel: charger un .env en dev (OPENAI_API_KEY, etc.)
+# on pourrait charger un .env avec la clé api à penser pour la suite quelle pratique est mieux 
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except Exception:
     pass
 
-# OpenAI est optionnel (tu peux rester en mode local)
 OPENAI_AVAILABLE = False
 try:
     from openai import OpenAI
@@ -231,9 +228,9 @@ async def chat(request: Request, authorization: str = Header(None)):
     ]
 
     SYSTEM = (
-      "Tu es un planificateur HTN d'investigation. Étapes: indices→mapping→lookup(size<=50)→join si paire claire "
-      "(on=[clé_child,clé_parent]). Utilise investment→company via on=['companies','id'] si pertinent. "
-      "Résume (#hits, champs utiles) et propose [affiner]/[conclure]. Réponds concis."
+      "Tu es un planificateur HTN d'investigation. Étapes: 1.indices 2.mapping 3.lookup(size<=50) 4.join si paire claire "
+      "(on=[clé_child,clé_parent]). Utilise investment company via on=['companies','id'] si pertinent. "
+      "Résume (#hits, champs utiles) et propose [affiner]/[conclure]. Réponds de manière concise."
     )
 
     messages: list[dict] = [
