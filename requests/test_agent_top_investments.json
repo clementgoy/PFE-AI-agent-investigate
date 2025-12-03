@@ -1,0 +1,3 @@
+{
+  "prompt": "Utilise l’agent spécialiste avec task=top_investments_for_company et params={company_label:'0-6.com', size:5}. Donne le nombre total d’investissements trouvés, puis une petite liste (libellé, année, montant+devise). Termine par 2 pistes pour affiner la recherche."
+}

@@ -1,0 +1,3 @@
+{
+  "prompt": "Autour d’Aeropostale, liste les entreprises qui ont reçu un investissement dans une fenêtre de ±30 jours des dates d’Aeropostale, montant >= 2M USD. Classe par total levé dans la fenêtre et donne 5 résultats."
+}

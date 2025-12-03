@@ -1,0 +1,3 @@
+{
+  "prompt": "Quelles entreprises à moins de 50km de 37.7749,-122.4194 ont eu un investissement dans les 90 derniers jours ? Utilise geo_distance sur company.location puis filtre funded_date. Donne les 10 plus proches avec la date."
+}
